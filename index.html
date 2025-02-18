@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给妈妈的信</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 18px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .letter-container {
+            position: relative;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .letter-container img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+        .letter-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+            padding: 10px;
+            box-sizing: border-box;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+        h1 {
+            color: #e91e63;
+            font-size: 2.5em;
+            margin-bottom: 18px;
+        }
+        p {
+            line-height: 1.1;
+            text-align: left;
+            font-size: 1.2em;
+            text-indent: 2em; /* 首行缩进2格 */
+            opacity: 0;
+            transform: translateY(16px);
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+        p:nth-child(2) { animation-delay: 2s; }
+        p:nth-child(3) { animation-delay: 4s; }
+        p:nth-child(4) { animation-delay: 8s; }
+        p:nth-child(5) { animation-delay: 12s; }
+        p:nth-child(6) { animation-delay: 14s; }
+        p:nth-child(7) { animation-delay: 15.5s; }
+        p:nth-child(8) { animation-delay: 17s; }
+        p:nth-child(9) { animation-delay: 17s; }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* 星星动画 */
+        .star {
+            position: absolute;
+            top: -10%;
+            width: 40px;
+            height: 40px;
+            background: gold;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-10%) rotate(0deg); }
+            100% { transform: translateY(110vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景音乐 -->
+    <audio autoplay loop>
+        <source src="warm_music.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+    <!-- 星星动画 -->
+    <div class="star" style="left: 10%; animation-duration: 5s;"></div>
+    <div class="star" style="left: 20%; animation-duration: 7s;"></div>
+    <div class="star" style="left: 30%; animation-duration: 6s;"></div>
+    <div class="star" style="left: 40%; animation-duration: 8s;"></div>
+    <div class="star" style="left: 50%; animation-duration: 9s;"></div>
+    <div class="star" style="left: 60%; animation-duration: 5s;"></div>
+    <div class="star" style="left: 70%; animation-duration: 6s;"></div>
+    <div class="star" style="left: 80%; animation-duration: 7s;"></div>
+    <div class="star" style="left: 90%; animation-duration: 8s;"></div>
+
+    <div class="letter-container">
+        <img src="mom_and_me.png" alt="妈妈和我">
+        <div class="letter-content">
+            <h1>亲爱的妈妈</h1>
+            <p>您好！今天我想写一封信给您，表达我对您的感激之情。</p>
+            <p>妈妈，您每天都很辛苦，早上早早起床给我做早餐，送我上学，晚上还要帮我检查作业。我知道您为了我付出了很多，有时候我调皮惹您生气，但您总是耐心地教导我，从来没有放弃过我。谢谢您一直以来的关心和爱护。</p>
+            <p>记得有一次我生病了，您整夜都没睡，一直守在我床边，给我喂药、量体温。那时候我虽然很难受，但看到您那么担心我，我心里特别温暖。妈妈，您就像我的守护天使，总是在我最需要的时候陪在我身边。</p>
+            <p>还有，您总是鼓励我，让我勇敢面对困难。每当我遇到不会做的题目时，您总是耐心地教我，直到我明白为止。您让我知道，只要努力，就没有什么做不到的事情。</p>
+            <p>妈妈，我爱您！我会好好学习，听您的话，做一个懂事的孩子，不辜负您的期望。希望您每天都开开心心，不要太累了。</p>
+            <p>祝您身体健康，天天快乐！</p>
+            <p>您的孩子: 陈梓轩</p>
+            <p>2025年2月</p>
+        </div>
+    </div>
+</body>
+</html>
